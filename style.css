@@ -1,0 +1,110 @@
+body{
+    background-color:rgb(58, 58, 58);
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+margin: 0;
+padding: 0;
+}
+/* header */
+header{
+    background-color: black;   /*header background color */
+    background-image: url("./real\ world\ project/bc-img.jpg");   /*header background img*/
+    background-size: 100%;  /* it increase the back ground(color,img) size*/
+    background-position: center; /*function unnone*/
+    height:400px ;   /* text height from the above*/
+    padding:25px;
+    text-align: center;
+}
+ 
+header a {
+    color:gray;
+    font-size: 30px;
+    text-decoration: none;  /*function unnone*/
+    text-transform: uppercase; /* it convert the text uppercase (A)or lowercase(a)etc.*/
+    margin-top: 40px; /* it move the content box which direction we move*/
+}
+
+header .mobile {
+    display: none;
+}
+
+header .logo a {
+    background-image: url("real\ world\ project/pic4.jpg");
+    background-size: 250px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 80px;
+    position: relative;
+    text-indent: -999999999px;
+    top: -20px;
+    width: 250px;
+    height: 250px;
+
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+list-style-type: none;
+}
+
+nav li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* responsive rules */
+@media screen and (max-width : 715px) {
+    header {
+        height: 250px;
+        background-position: 0-30px;
+    }
+    header .desktop{
+        display: none;
+    }
+}
+
+@media screen and (max-width:500px) {
+    header{
+        height : 200px;
+        background-position: 0-0px;
+    }
+    
+}
+
+.features{
+    background: white;
+color: gray;
+padding: 20px;
+display:flex;
+flex-direction: row;
+flex-wrap: wrap;
+}
+.features figure {
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 150px;
+}
+
+.features figure img {
+    border: 1px solid white;
+    border-radius: 50%;
+    box-shadow: gray 0 0 10px;
+    width: 200px;
+}
+
+.myFooter{
+    list-style-type: none;
+    display: inline;
+}
+footer {
+    background: black;
+    color: gray;
+    font-size: 23px;
+    padding: 20px 20px;
+    text-align: left;
+    
+}
+
