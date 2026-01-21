@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- part--1 -->
+
+    <nav>
+    <div class="div_logo">
+        <img src="https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/wol.png" alt="logo">
+    </div>
+    <div class="div_ul">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="#all_cars">View Adds</a></li>
+            <li><a href="#" onclick="openModal('create')">Create Add</a></li>
+            <li><a href="#photos">Gallery</a></li>
+            <li><a href="#footer+_section">Contact</a></li>
+        </ul>
+    </div>
+    <div class="profile_logo">
+          <img src="	https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/Avatar.png"/>
+        <div class="dropdown-menu">
+            <a href="#" onclick="openModal('signin')">Sign In</a>
+            <a href="#" onclick="openModal('signup')">Sign Up</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Login/Signup Modal -->
+<div class="modal" id="authModal">
+    <div class="login_form">
+        <h2 id="formTitle">Sign in to your account</h2>
+        <p>to enjoy all of our cool features ✌️</p>
+        <form>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter Email" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter Password" required>
+            
+            <div class="remember-me">
+                <input type="checkbox" id="remember">
+                <label for="remember" style="display: inline;">Remember me</label>
+            </div>
+            
+            <div class="form-buttons">
+                <button type="submit" class="btn-submit">Submit</button>
+                <button type="button" class="btn-cancel" onclick="closeModal()">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+      <!-- <div class="profile_logo">
+      
+        <div class="dropdown-menu" id="dropdownMenu">
+          <a href="login.html">Login In</a>
+          <a href="register.html">Register Here</a>
+        </div>
+      </div>
+    </nav> -->
+
+    <!-- part--2 -->
+    <div class="first_text">Welcome To Ride Advertise</div>
+    <div class="top_section">
+      <img
+        src="	https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/carsh.jpg"
+        alt="carsh"
+      />
+    </div>
+
+    <!-- part--3-->
+    <div class="cars_available" id="all_cars">
+      <h1>All Available cars</h1>
+      <div class="available_cars">
+        <div>
+          <img
+            src="	https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/punch.jpg"
+            alt="Tata Punch"
+          />
+          <h2>Tata Punch</h2>
+          <h4>Brand:Tata</h4>
+          <p>Model:2010</p>
+          <p>Type:Manual</p>
+          <p>Price:120000</p>
+          <p>Location:lucknow uttar pradesh</p>
+          <button>KnowMore</button>
+        </div>
+
+        <div>
+          <img
+            src="https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/mhsuv.webp"
+            alt="Mahindra SUV"
+          />
+          <h2>Mahindra SUV</h2>
+          <h4>Brand:Mahindra</h4>
+          <p>Model:2022</p>
+          <p>Type:AutoMatic</p>
+          <p>Price:200000</p>
+          <p>Location:Nashik Maharastra</p>
+          <button>KnowMore</button>
+        </div>
+
+        <div>
+          <img
+            src="https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/swfit.jpg"
+            alt="Swift Dezire"
+          />
+          <h2>Swift Dezire</h2>
+          <h4>Brand:Suzuki</h4>
+          <p>Model:2021</p>
+          <p>Type:Manual</p>
+          <p>Price:2000000</p>
+          <p>Location:lucknow uttar pradesh India</p>
+          <button>KnowMore</button>
+        </div>
+
+        <div>
+          <img
+            src="	https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/suzuki.jpg"
+            alt="Suzuki Sports Car"
+          />
+          <h2>Suzuki Sports Car</h2>
+          <h4>Brand:Suzuki</h4>
+          <p>Model:2023</p>
+          <p>Type:AutoMatic</p>
+          <p>Price:1200000</p>
+          <p>Location:Mumbai Maharastra India</p>
+          <button>KnowMore</button>
+        </div>
+
+        <div>
+          <img
+            src="https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/punch.jpg"
+            alt="Tata Punch"
+          />
+          <h2>Tata Punch</h2>
+          <h4>Brand:Tata</h4>
+          <p>Model:2010</p>
+          <p>Type:Manual</p>
+          <p>Price:120000</p>
+          <p>Location:lucknow uttar pradesh</p>
+          <button>KnowMore</button>
+        </div>
+
+        <div>
+          <img
+            src="	https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/mhsuv.webp"
+            alt="Mahindra SUV"
+          />
+          <h2>Mahindra SUV</h2>
+          <h4>Brand:Mahindra</h4>
+          <p>Model:2022</p>
+          <p>Type:AutoMatic</p>
+          <p>Price:200000</p>
+          <p>Location:Nashik Maharastra</p>
+          <button>KnowMore</button>
+        </div>
+
+        <div>
+          <img
+            src="	https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/swfit.jpg"
+            alt="Swift Dezire"
+          />
+          <h2>Swift Dezire</h2>
+          <h4>Brand:Suzuki</h4>
+          <p>Model:2021</p>
+          <p>Type:Manual</p>
+          <p>Price:2000000</p>
+          <p>Location:lucknow uttar pradesh India</p>
+          <button>KnowMore</button>
+        </div>
+        <div>
+          <img
+            src="https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/suzuki.jpg"
+            alt="Suzuki Sports Car"
+          />
+          <h2>Suzuki Sports Car</h2>
+          <h4>Brand:Suzuki</h4>
+          <p>Model:2023</p>
+          <p>Type:AutoMatic</p>
+          <p>Price:1200000</p>
+          <p>Location:Mumbai Maharastra India</p>
+          <button>KnowMore</button>
+        </div>
+
+        <div>
+          <img
+            src="https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/brezza.webp"
+            alt="Tata Punch"
+          />
+          <h2>Tata Punch</h2>
+          <h4>Brand:Tata</h4>
+          <p>Model:2023</p>
+          <p>Type:AutoMatic</p>
+          <p>Price:400000</p>
+          <p>Location:Pune Maharastra</p>
+          <button>KnowMore</button>
+        </div>
+
+        <div>
+          <img
+            src="https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/brezza.webp"
+            alt="Tata Altroz"
+          />
+          <h2>Tata Altroz</h2>
+          <h4>Brand:Tata</h4>
+          <p>Model:2023</p>
+          <p>Type:AutoMatic</p>
+          <p>Price:500000</p>
+          <p>Location:Delhi India</p>
+          <button>KnowMore</button>
+        </div>
+
+        <div>
+          <img
+            src="https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/thar.jpg"
+            alt="Mahindra THar"
+          />
+          <h2>Mahindra THar</h2>
+          <h4>Brand:Mahindra</h4>
+          <p>Model:2022</p>
+          <p>Type:Semi-AutoMatic</p>
+          <p>Price:45555555</p>
+          <p>Location:Pune Maharastra India</p>
+          <button>KnowMore</button>
+        </div>
+
+        <div>
+          <img
+            src="	https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/sports.jpg"
+            alt="Swift"
+          />
+          <h2>Swift</h2>
+          <h4>Brand:Suzuki</h4>
+          <p>Model:2012</p>
+          <p>Type:Manual</p>
+          <p>Price:9875000</p>
+          <p>Location:Jaipur rajasthan</p>
+          <button>KnowMore</button>
+        </div>
+      </div>
+    </div>
+    <!-- part--4 -->
+
+    <div class="photos" id="photos">
+      <h1>Photos Gallery</h1>
+      <div class="photos_gallery">
+        <div>
+          <img
+            src="https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/suzuki.jpg"
+          />
+        </div>
+        <div>
+          <img
+            src="	https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/sports.jpg"
+          />
+        </div>
+        <div>
+          <img
+            src="	https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/swfit.jpg"
+          />
+        </div>
+        <div>
+          <img
+            src="	https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/punch.jpg"
+          />
+        </div>
+        <div>
+          <img
+            src="https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/sports.jpg"
+          />
+        </div>
+        <div>
+          <img
+            src="https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/punch.jpg"
+          />
+        </div>
+        <div>
+          <img
+            src="	https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/suzuki.jpg"
+          />
+        </div>
+        <div>
+          <img
+            src="https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/punch.jpg"
+          />
+        </div>
+        <div>
+          <img
+            src="https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/suzuki.jpg"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- part-5 -->
+    <div class="contact_us_section">
+      <div>
+        <img
+          src="	https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/form.png"
+          alt="contact_us"
+        />
+      </div>
+      <div class="contact_us_form">
+        <h2>Contact Us</h2>
+        <form action="">
+          <div>
+            <label for="">Name-</label>
+            <br />
+            <input type="text" placeholder="Enter your Name" />
+          </div>
+          <div>
+            <label for="">Mobile-</label>
+            <br />
+            <input type="tel" placeholder="Enter your Mobile" />
+          </div>
+          <div>
+            <label for="">Email-</label>
+            <br />
+            <input type="email" placeholder="Enter your Email here" />
+          </div>
+          <div>
+            <label for="">Query-</label>
+            <br />
+            <textarea name="text_area">Type your Query</textarea>
+          </div>
+        </form>
+        <div class="btn">
+          <button>Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- part-5-end -->
+
+    <!-- part--6 -->
+    <footer class="footer" id="footer+_section">
+      <div class="one">
+        <div class="first">
+          <img
+            src="	https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/wol.png"
+            alt="logo"
+          />
+          <h3>Ride Advertise</h3>
+        </div>
+        <p>2003 Ride Advertise. All rights reserved</p>
+        <div class="second">
+          <img
+            src="https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/twit.png"
+          />
+          <img
+            src="https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/y.png"
+          />
+          <img
+            src="	https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/inst.jpg"
+          />
+        </div>
+      </div>
+
+      <div class="two">
+        <h3>Company</h3>
+        <ul>
+          <li>About us</li>
+          <li>Blog</li>
+          <li>Contact us</li>
+          <li>pricing</li>
+          <li>Testimonials</li>
+        </ul>
+      </div>
+
+      <div class="three">
+        <h3>Support</h3>
+        <ul>
+          <li>Help Center</li>
+          <li>Terms of Service</li>
+          <li>Legal</li>
+          <li>privacy</li>
+          <li>Status</li>
+        </ul>
+      </div>
+
+      <div class="four">
+        <h3>Stay up to date</h3>
+        <div class="mail">
+          <input type="email" placeholder="your email address" />
+          <button>
+            <img
+              src="https://65e6c5c98f1f1c614d8d87d2--extraordinary-crepe-efa409.netlify.app/Images/gmail.png"
+            />
+          </button>
+        </div>
+      </div>
+    </footer>
+
+     <script>
+    function openModal(type) {
+        const modal = document.getElementById('authModal');
+        const title = document.getElementById('formTitle');
+        
+        if (type === 'signin' || type === 'create') {
+            title.textContent = 'Sign in to your account';
+        } else if (type === 'signup') {
+            title.textContent = 'Create your account';
+        }
+        
+        modal.classList.add('active');
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('authModal');
+        modal.classList.remove('active');
+    }
+
+    // Close modal when clicking outside
+    document.getElementById('authModal').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeModal();
+        }
+    });
+</script>
+  </body>
+</html>

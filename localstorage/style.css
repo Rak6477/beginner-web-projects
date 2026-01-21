@@ -1,0 +1,47 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, sans-serif;
+  font-size: medium;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 50px;
+  width: 25%;
+}
+form {
+  border: 1px solid red;
+  border-radius: 5px;
+  padding: 6px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: #fff;
+  gap: 3px;
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.userTable {
+  width: 90%;
+  border-collapse: collapse; /* removes double borders */
+  margin: 20px auto;
+}
+th,
+td {
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+}
+th {
+  background-color: #f4f4f4;
+}

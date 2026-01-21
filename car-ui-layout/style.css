@@ -1,0 +1,490 @@
+
+/* Updated Navbar Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 0 5%;
+    height: 80px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.div_logo img {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+
+.div_logo img:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.div_ul ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.div_ul a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 8px 0;
+}
+
+.div_ul a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.div_ul a:hover::after {
+    width: 100%;
+}
+
+.div_ul a:hover {
+    transform: translateY(-2px);
+}
+
+/* Profile Dropdown */
+.profile_logo {
+    position: relative;
+}
+
+.profile_logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid white;
+    transition: all 0.3s ease;
+}
+
+.profile_logo img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.profile_logo:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 15px 20px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-menu a:first-child {
+    border-radius: 10px 10px 0 0;
+}
+
+.dropdown-menu a:last-child {
+    border-radius: 0 0 10px 10px;
+    border-bottom: none;
+}
+
+.dropdown-menu a:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding-left: 30px;
+}
+
+/* Animated Welcome Text */
+.first_text {
+    background: linear-gradient(90deg, #39f, #93f, #60c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    padding: 40px 20px;
+    animation: slideInLeft 1.5s ease-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Login Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.login_form {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    max-width: 450px;
+    width: 90%;
+    animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.login_form h2 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.login_form p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.login_form label {
+    display: block;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 8px;
+    margin-top: 20px;
+}
+
+.login_form input[type="email"],
+.login_form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.login_form input[type="email"]:focus,
+.login_form input[type="password"]:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.login_form input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.remember-me {
+    margin-top: 15px;
+    color: #666;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.form-buttons button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-cancel {
+    background: #f0f0f0;
+    color: #333;
+}
+
+.btn-cancel:hover {
+    background: #e0e0e0;
+}
+
+
+
+
+
+
+.top_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ----part--2-end--- */
+
+/* ----part--3---- */
+#all_cars h1 {
+  text-align: center;
+}
+
+.available_cars img {
+  width: 300px;
+  height: 200px;
+  padding: 10px;
+  justify-items: center;
+  align-content: center;
+}
+.available_cars {
+  display: flex;
+  flex-direction: row;
+  float: left;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px;
+  box-sizing: border-box;
+}
+.available_cars div {
+  border-radius: 10px;
+  box-shadow: rgba(22, 22, 22, 0.356) 0px 3px 8px;
+  padding: 10px;
+}
+
+h2,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+button {
+  padding: 7px;
+  background-color: salmon;
+  color: white;
+  font-weight: bold;
+  font-size: small;
+  border: none;
+  border-radius: 5px;
+}
+/* ----part--3-end---- */
+
+/* -----part--4---- */
+.photos h1 {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.photos_gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.photos_gallery img {
+  width: 470px;
+  height: 280px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  gap: 10px;
+  box-shadow: rgba(22, 22, 22, 0.356) 0px 3px 8px;
+}
+.photos_gallery div {
+  padding: 10px;
+}
+
+/* ----part--4-end---- */
+
+/* ----part--5---- */
+.contact_us_section {
+  display: flex;
+  /* justify-content: space-between; */
+}
+.contact_us_section img {
+  margin: 25px;
+  margin-top: 60px;
+  gap: 10px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 5px;
+  background-color: whitesmoke;
+}
+
+.contact_us_form {
+  display: block;
+  margin-top: 70px;
+  margin-left: 50px;
+  font-weight: bold;
+  color: #888;
+}
+.contact_us_form h2 {
+  margin-bottom: 25px;
+}
+
+.contact_us_form input {
+  padding: 10px;
+  width: 450px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  gap: 10px;
+  border-radius: 5px;
+  border-style: hidden;
+  border: 1px solid #888;
+}
+
+textarea {
+  width: 500px;
+  height: 112px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  gap: 10px;
+  border-radius: 5px;
+  color: #888;
+}
+
+.contact_us_form button {
+  margin: 10px;
+  padding: 10px;
+  width: 130px;
+  color: white;
+  background-color: rgba(90, 105, 240, 0.896);
+  font-weight: bold;
+  font-size: large;
+  border-radius: 5px;
+  border: 2px solid black;
+  text-align: center;
+}
+/* ----part--5-end---- */
+
+/* ----part--6---- */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  background-color: rgb(231, 235, 237);
+  margin-top: 50px;
+  padding-top: 5px;
+  color: rgb(45, 45, 45);
+}
+.one img {
+  width: 30px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.first {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+}
+.first h3 {
+  margin: 10px;
+  padding: 10px;
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(98, 98, 233);
+}
+
+.one p {
+  font-size: 18px;
+}
+
+.second img {
+  margin-left: 20px;
+  border-radius: 50%;
+}
+
+.two ul,
+.three ul {
+  list-style-type: none;
+  font-size: 17px;
+  padding-left: 0px;
+}
+.two li,
+.three li {
+  padding-bottom: 10px;
+}
+.two h3,
+.three h3,
+.four h3 {
+  font-size: 20px;
+}
+.mail img {
+  width: 35px;
+  height: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.mail button {
+  background-color: aliceblue;
+  border-radius: 5px;
+  margin: 5px;
+}
+.mail input {
+  height: 40px;
+  border-radius: 5px;
+  width: 230px;
+  border: none;
+  background-color: rgb(210, 205, 205);
+}
+
+

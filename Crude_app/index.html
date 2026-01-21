@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crude Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="heading">Crude Application With Local Storage</h2>
+        <div class="userInput">
+            <div class="row">
+                <div class="form">
+                    <label for="name">Name</label><br>
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Enter Your Full Name">
+                </div>
+
+                <div class="form">
+                    <label for="age">Age</label><br>
+                    <input type="number" name="age" class="form-control" id="age" placeholder="Enter Your Age">
+                </div>
+
+                <div class="form">
+                    <label for="address">Address</label><br>
+                    <input type="text" name="address" class="form-control" id="address" placeholder="Enter Your Address">
+                </div>
+                
+                <div class="form">
+                    <label for="email">Email</label><br>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Enter Your Email">
+                </div>
+                <div class="button">
+                    <button class="submit-btn" id="submit" onclick="AddData()">Submit</button>
+                    <button class="edit-btn" id="edit" >Edit</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="table">
+            <div class="userdata">
+                <table class="tabledata" id="Crudetable">
+                    <thead>
+                        <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Address</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
